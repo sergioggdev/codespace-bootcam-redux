@@ -1,0 +1,17 @@
+#############################################################
+#                   Config Ignore File                      #
+#############################################################
+
+# Folder ignored
+node_modules/
+build/
+.cache/
+
+
+# Files ignored
+yarn.lock
+yarn-error.log
+package-lock.json
+yarn-error.log
+.DS_Store
+npm-debug.log
