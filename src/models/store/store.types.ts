@@ -1,6 +1,5 @@
-import { RootStateTypes, ChiefOfDayStateTypes } from '@Models';
+import { RootStateTypes } from '@Models';
 
 export type State = {
   readonly rootReducer: RootStateTypes;
-  readonly chiefOfDayReducer: ChiefOfDayStateTypes;
 };

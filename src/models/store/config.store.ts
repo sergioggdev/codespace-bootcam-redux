@@ -1,13 +1,12 @@
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { createLogger } from 'redux-logger';
-import reduxThunk from 'redux-thunk';
 import { allReducers } from '@Models';
 
 const logger = createLogger({ collapsed: true });
-const middleware = composeWithDevTools(applyMiddleware(logger, reduxThunk));
+const middleware = composeWithDevTools(applyMiddleware(logger));
 
-const store = {}; // Create the store
+const store = createStore(allReducers, {}, middleware);
 
 if (module.hot) {
   module.hot.accept(() => {

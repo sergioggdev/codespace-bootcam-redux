@@ -6,6 +6,7 @@ const { Component } = React;
 
 // Import local resources
 import { Props } from './product.types';
+import { containerComponent } from './product.decorator';
 import {
   Title,
   Container,
@@ -21,7 +22,12 @@ import {
  * @class Product
  * @description Cada uno de los productos
  */
+@containerComponent
 export class Product extends Component<Props> {
+  handdleClick = data => () => {
+    this.props.addAction(data);
+  };
+
   render() {
     const { name, image, price } = this.props.data;
     return (
@@ -34,7 +40,7 @@ export class Product extends Component<Props> {
         </ImgBox>
         <SubContainer>
           <Title>{name}</Title>
-          <Link>Añadir</Link>
+          <Link onClick={this.handdleClick(this.props.data)}>Añadir</Link>
         </SubContainer>
       </Container>
     );
