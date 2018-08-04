@@ -29,9 +29,8 @@ export const CartArea = styled.div`
   right: 0;
   top: 40px;
   height: 300px;
-  border: 1px solid #cccccc;
   border-radius: 5px 0 5px 5px;
-  padding: 20px;
+  padding: 15px;
 
   &:before {
     content: '';
