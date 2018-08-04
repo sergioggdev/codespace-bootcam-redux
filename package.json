@@ -2,7 +2,7 @@
   "name": "codespace-redux",
   "version": "0.0.1",
   "description": "Bootcamp Codespace training",
-  "main": "src/index.jsx",
+  "main": "src/index.tsx",
   "author": "sergio Garcia",
   "license": "ISC",
   "engines": {
@@ -20,31 +20,53 @@
     "@Assets": "./src/assets/"
   },
   "scripts": {
-    "start": "rimraf build/ && npm run parcel-dev",
+    "start": "concurrently \"npm run server\" \"npm run runner\"",
+    "server": "json-server --watch db.json",
+    "runner": "rimraf build/ && npm run parcel-dev",
     "clear": "rimraf .cache/ build/ yarn-error.log",
     "clear:all": "rimraf .cache/ build/ node_modules/ yarn-error.log yarn.lock package-lock.json",
-    "format": "prettier --write './src/**/*.{js,jsx}'",
-    "parcel-dev": "parcel src/index.html -d build/ --open"
+    "linter": "npm run linter:js && npm run linter:style",
+    "format": "npm run format:js && npm run format:style",
+    "typeCheck": "tsc -p tsconfig.json --noEmit --skipLibCheck",
+    "linter:js": "tslint -p tsconfig.json './src/**/*.{ts,tsx}'",
+    "linter:style": "stylelint './src/**/*.{ts,tsx,css,scss}'",
+    "format:js": "prettier --write './src/**/*.{ts,tsx}'",
+    "format:style": "stylelint './src/**/*.{ts,tsx,css,scss}' --fix",
+    "parcel-dev": "parcel src/index.html -d build/"
   },
   "devDependencies": {
-    "autoprefixer": "^9.0.2",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-2": "^6.24.1",
-    "cloc": "^2.3.3",
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
+    "@types/react-redux": "^6.0.4",
+    "@types/redux-thunk": "^2.1.0",
+    "@types/webpack-env": "^1.13.6",
+    "concurrently": "^3.6.1",
     "node-sass": "^4.9.2",
     "parcel-bundler": "^1.9.7",
-    "postcss-modules": "^1.3.2",
+    "parcel-plugin-typescript": "^1.0.0",
     "prettier": "^1.14.0",
     "redux-devtools-extension": "^2.13.5",
     "redux-logger": "^3.0.6",
-    "rimraf": "^2.6.2"
+    "rimraf": "^2.6.2",
+    "stylelint": "^9.4.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.3.1",
+    "tslint": "^5.11.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "tslint-config-prettier": "^1.13.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^2.9.2"
   },
   "dependencies": {
+    "json-server": "^0.14.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-hot-loader": "^4.3.4",
+    "react-hot-loader": "^4.3.3",
     "react-redux": "^5.0.7",
-    "react-router-dom": "^4.3.1",
-    "redux": ">=4.0.0"
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0",
+    "styled-components": "^3.3.3"
   }
 }

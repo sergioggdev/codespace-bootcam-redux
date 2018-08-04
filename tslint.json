@@ -1,0 +1,19 @@
+{
+  "extends": ["tslint-react", "tslint-config-airbnb", "tslint-config-prettier"],
+  "rules": {
+    "variable-name": [true,
+      "check-format",
+      "allow-pascal-case",
+      "ban-keywords"
+    ],
+    "ter-max-len": [true, {
+      "code": 100,
+      "tabWidth": 2,
+      "ignoreUrls": true,
+      "ignoreComments": true
+    }],
+    "ter-arrow-parens": [true, "as-needed"],
+    "jsx-boolean-value": false,
+    "no-increment-decrement": false
+  }
+}

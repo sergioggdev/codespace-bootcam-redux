@@ -1,0 +1,25 @@
+{
+    "products": [
+      { "id": 1, "name": "Josema Ezquerra", "cargo": "CEO", "price": "20.134€", "image": "/josema-ezquerra.jpg" },
+      { "id": 2, "name": "Jair Lozano", "cargo": "Business Development Manager", "price": "18.234€", "image": "/jair-lozano.jpg" },
+      { "id": 3, "name": "José Francisco", "cargo": "Full Stach web Developer", "price": "16.375€", "image": "/jose-francisco.jpg" },
+      { "id": 4, "name": "Claudia Reyes", "cargo": "Front Desk Service", "price": "18.352€", "image": "/claudia-reyes.jpg" },
+      { "id": 5, "name": "Jonas Brandel", "cargo": "real life programming advisor", "price": "24.871€", "image": "/jonas-brandel.jpg" },
+      { "id": 6, "name": "Alberto Sainz", "cargo": "real life programming advisor", "price": "16.639€", "image": "/alberto-sainz.jpg" },
+      { "id": 7, "name": "Juan Gabriel", "cargo": "Mathematician for real life coding", "price": "16.375€", "image": "/juan-grabiel.jpg" },
+      { "id": 8, "name": "Pedro Bonilla", "cargo": "database elite consultant", "price": "22.503€", "image": "/pedro-bonilla.jpg" },
+      { "id": 9, "name": "Inma Reguero", "cargo": "English technical developer", "price": "17.735€", "image": "/inma-reguero.png" },
+      { "id": 10, "name": "Maria Cergedean", "cargo": "real life programming advisor", "price": "15.945€", "image": "/maria-cergedean.jpg" },
+      { "id": 11, "name": "Juan Alarcón", "cargo": "real life programming advisor", "price": "22.058€", "image": "/juan-alarcon.jpg" },
+      { "id": 12, "name": "Ricardo Llamas", "cargo": "lifehacker expert", "price": "15.663€", "image": "/ricardo-llamas.jpg" },
+      { "id": 13, "name": "Zayan Ahmed", "cargo": "Code marketing intern", "price": "18.426€", "image": "/zayan-ahmed.jpg" },
+      { "id": 14, "name": "Geovanny Hernández", "cargo": "database elite consultant", "price": "20.280€", "image": "/geovanny-hernandez.jpg" },
+      { "id": 15, "name": "Miguel Caballero", "cargo": "extreme programming evangelist", "price": "19.670€", "image": "/miguel-caballero.jpg" },
+      { "id": 16, "name": "Miguel Fernández", "cargo": "real life programming advisor", "price": "19.780€", "image": "/miguel-fernandez.jpg" },
+      { "id": 17, "name": "Javier Franco", "cargo": "real life programming advisor", "price": "23.558€", "image": "/javier-franco.jpg" },
+      { "id": 18, "name": "Gerardo Ruiz", "cargo": "real life programming advisor", "price": "19.937€", "image": "/gerardo-ruiz.jpg" },
+      { "id": 19, "name": "Carlos Yáñez", "cargo": "real life programming advisor", "price": "18.352€", "image": "/carlos-yanez.jpg" },
+      { "id": 20, "name": "José Antonio", "cargo": "real life programming advisor", "price": "16.363€", "image": "/jose-antonio.jpg" },
+      { "id": 21, "name": "Sergio Garcia", "cargo": "real life programming advisor", "price": "25.397€", "image": "/sergio-garcia.jpg" }
+    ]
+}

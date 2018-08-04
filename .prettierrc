@@ -1,7 +1,7 @@
 {
   "printWidth": 100,
   "tabWidth": 2,
-  "parser": "babylon",
+  "parser": "typescript",
   "useTabs": false,
   "semi": true,
   "singleQuote": true,
