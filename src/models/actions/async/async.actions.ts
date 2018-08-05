@@ -1,23 +1,15 @@
-import { AddActionGenerator, DeleteActionGenerator } from './async.types';
+import { getErrorGenerator, getSuccessGenerator } from './async.types';
 
-export const addAction: AddActionGenerator = payload => ({ payload, type: 'ADD_PRODUCT' });
-export const deleteAction: DeleteActionGenerator = payload => ({ payload, type: 'DELETE_PRODUCT' });
+const getProductSuccess: getSuccessGenerator = payload => ({ payload, type: 'PRODUCT_SUCCESS' });
+const getProductError: getErrorGenerator = payload => ({ payload, type: 'PRODUCT_ERROR' });
 
-function increment() {
-  return {
-    type: INCREMENT_COUNTER,
-  };
-}
-
-function incrementAsync() {
-  return dispatch => {
-    fetch('http://localhost:3000/products')
-      .then(res => res.json())
-      .then(res => {
-        dispatch(increment(res));
-      })
-      .catch(err => {
-        dispatch(error(err));
-      });
-  };
-}
+export const getProduct = () => dispatch => {
+  fetch('http://localhost:3000/products')
+    .then(res => res.json())
+    .then(res => {
+      dispatch(getProductSuccess(res));
+    })
+    .catch(err => {
+      dispatch(getProductError(err));
+    });
+};

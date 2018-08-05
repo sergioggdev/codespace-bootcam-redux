@@ -25,7 +25,7 @@ import {
 @containerComponent
 export class Product extends Component<Props> {
   handdleClick = data => () => {
-    this.props.addAction(data);
+    if (this.props.addAction) this.props.addAction(data);
   };
 
   render() {

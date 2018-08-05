@@ -6,5 +6,5 @@ export type Props = {
     cargo: string;
     image: string;
   };
-  addAction: ({ name, price, id, cargo, image }) => void;
+  addAction?: ({ name, price, id, cargo, image }) => void;
 };

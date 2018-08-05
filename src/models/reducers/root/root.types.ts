@@ -8,5 +8,5 @@ type Product = {
 };
 
 export type RootStateTypes = {
-  readonly cart: (Product)[];
+  readonly cart: Product[];
 };

@@ -2,16 +2,18 @@ import { ComponentType } from 'react';
 import { connect } from 'react-redux';
 import { Dispatch, bindActionCreators } from 'redux';
 
-import { addAction } from '@Models';
+import { State, getProduct } from '@Models';
 
 // Config default Props
 const defaultProps = {};
 
 // Add Redux State to Component props
-const mapsStateToProps = () => ({});
+const mapsStateToProps = (state: State) => ({
+  products: state.asyncReducer.products,
+});
 
 // Add Redux dispatch to Component props
-const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators({ addAction }, dispatch);
+const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators({ getProduct }, dispatch);
 
 // Export Decorator for extend the Component
 export function containerComponent(constructor: ComponentType<any>) {

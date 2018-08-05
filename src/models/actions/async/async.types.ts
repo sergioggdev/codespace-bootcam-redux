@@ -6,10 +6,10 @@ type Product = {
   image: string;
 };
 
-type AddAction = { type: 'ADD_PRODUCT'; payload: Product };
-export type AddActionGenerator = (payload: Product) => AddAction;
+type getProductSuccess = { type: 'PRODUCT_SUCCESS'; payload: Product[] };
+export type getSuccessGenerator = (payload: Product[]) => getProductSuccess;
 
-type DeleteAction = { type: 'DELETE_PRODUCT'; payload: { id: number } };
-export type DeleteActionGenerator = (payload: { id: number }) => DeleteAction;
+type getProductError = { type: 'PRODUCT_ERROR'; payload: Object };
+export type getErrorGenerator = (payload: { id: number }) => getProductError;
 
-export type rootAction = AddAction | DeleteAction;
+export type asyncAction = getProductSuccess | getProductError;
