@@ -5,7 +5,7 @@ const { Component } = React;
 
 // Import global resources
 import { Store } from '@Models';
-import { Between } from '@Routes';
+import { App } from '@Routes';
 
 // Import local resources
 import { Props } from './router.types';
@@ -19,7 +19,7 @@ export class Router extends Component<Props> {
   render() {
     return (
       <Provider store={Store}>
-        <Between />
+        <App />
       </Provider>
     );
   }
