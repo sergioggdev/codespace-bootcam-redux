@@ -5,4 +5,5 @@ export type Props = {
 
 export type TextType = {
   bold?: boolean;
+  className?: string;
 };

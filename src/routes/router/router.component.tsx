@@ -6,6 +6,8 @@ const { Component } = React;
 // Import global resources
 import { Store } from '@Models';
 import { App } from '@Routes';
+import { theme } from '@Assets';
+import { ThemeProvider } from '@Tools';
 
 // Import local resources
 import { Props } from './router.types';
@@ -19,7 +21,9 @@ export class Router extends Component<Props> {
   render() {
     return (
       <Provider store={Store}>
-        <App />
+        <ThemeProvider theme={theme}>
+          <App />
+        </ThemeProvider>
       </Provider>
     );
   }

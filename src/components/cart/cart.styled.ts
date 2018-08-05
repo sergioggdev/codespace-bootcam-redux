@@ -99,7 +99,7 @@ export const MiniTxt: ComponentType<TextType> = styled.p`
   box-sizing: border-box;
   margin: 0;
   font-size: 12px;
-  font-weight: ${props => (props.bold ? 'bold' : 'normal')};
+  font-weight: ${(props: any) => (props.bold ? 'bold' : 'normal')};
 `;
 
 export const Link = styled.a`
